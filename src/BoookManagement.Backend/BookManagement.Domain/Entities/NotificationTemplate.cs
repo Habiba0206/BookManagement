@@ -3,7 +3,7 @@ using BookManagement.Domain.Enums;
 
 namespace BookManagement.Domain.Entities;
 
-public abstract class NotificationTemplate : IEntity
+public abstract class NotificationTemplate : AuditableEntity
 {
     public NotificationType Type { get; set; }
 

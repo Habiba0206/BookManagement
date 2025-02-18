@@ -3,7 +3,7 @@ using BookManagement.Domain.Enums;
 
 namespace BookManagement.Domain.Entities;
 
-public abstract class VerificationCode : Entity
+public abstract class VerificationCode : AuditableEntity
 {
     public VerificationCodeType CodeType { get; set; }
 

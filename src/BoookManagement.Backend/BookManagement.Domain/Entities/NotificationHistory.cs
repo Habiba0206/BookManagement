@@ -3,7 +3,7 @@ using BookManagement.Domain.Enums;
 
 namespace BookManagement.Domain.Entities;
 
-public abstract class NotificationHistory : IEntity
+public abstract class NotificationHistory : AuditableEntity
 {
     public Guid TemplateId { get; set; }
 

@@ -14,4 +14,5 @@ public class User : AuditableEntity
     public Role Role { get; set; }
     public UserState UserState { get; set; }
     public UserSettings? UserSettings { get; set; }
+    public IEnumerable<Book> Books { get; set; }
 }
