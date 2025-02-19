@@ -1,7 +1,7 @@
 ﻿using BookManagement.Domain.Common.Commands;
 using BookManagement.Domain.Entities;
 
-namespace BookManagement.Persistance.Repositories.Interfaces;
+namespace BookManagement.Persistence.Repositories.Interfaces;
 
 public interface IAccessTokenRepository
 {

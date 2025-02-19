@@ -1,12 +1,12 @@
-﻿using BookManagement.Persistance.Caching.Brokers;
-using BookManagement.Persistance.DataContexts;
-using BookManagement.Persistance.Repositories.Interfaces;
-using BookManagement.Domain.Common.Commands;
+﻿using BookManagement.Domain.Common.Commands;
 using BookManagement.Domain.Common.Queries;
 using BookManagement.Domain.Entities;
 using System.Linq.Expressions;
+using BookManagement.Persistence.Caching.Brokers;
+using BookManagement.Persistence.DataContexts;
+using BookManagement.Persistence.Repositories.Interfaces;
 
-namespace BookManagement.Persistance.Repositories;
+namespace BookManagement.Persistence.Repositories;
 
 public class EmailHistoryRepository(AppDbContext appDbContext, ICacheBroker cacheBroker) :
     EntityRepositoryBase<EmailHistory, AppDbContext>(appDbContext, cacheBroker),

@@ -1,7 +1,7 @@
 ﻿using BookManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookManagement.Persistance.DataContexts;
+namespace BookManagement.Persistence.DataContexts;
 public class AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : DbContext(dbContextOptions)
 {
     public DbSet<User> Users => Set<User>();

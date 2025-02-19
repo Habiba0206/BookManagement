@@ -3,7 +3,7 @@ using BookManagement.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BookManagement.Persistance.EntityConfigurations;
+namespace BookManagement.Persistence.EntityConfigurations;
 
 public class NotificationHistoryConfiguration : IEntityTypeConfiguration<NotificationHistory>
 {
@@ -13,7 +13,7 @@ public class NotificationHistoryConfiguration : IEntityTypeConfiguration<Notific
 
         builder.ToTable("NotificationHistories").HasDiscriminator(history => history.Type).HasValue<EmailHistory>(NotificationType.Email);
 
-        builder.HasOne<NotificationTemplate>(history => history.Template)
+        builder.HasOne(history => history.Template)
             .WithMany(template => template.Histories)
             .HasForeignKey(history => history.TemplateId);
 

@@ -1,13 +1,13 @@
 ﻿using System.Linq.Expressions;
-using BookManagement.Persistance.Caching.Brokers;
-using BookManagement.Persistance.Caching.Models;
-using BookManagement.Persistance.Extensions;
 using BookManagement.Domain.Common.Commands;
 using BookManagement.Domain.Common.Entities;
 using BookManagement.Domain.Common.Queries;
 using Microsoft.EntityFrameworkCore;
+using BookManagement.Persistence.Caching.Models;
+using BookManagement.Persistence.Caching.Brokers;
+using BookManagement.Persistence.Extensions;
 
-namespace BookManagement.Persistance.Repositories;
+namespace BookManagement.Persistence.Repositories;
 
 /// <summary>
 /// Represents a base repository for entity with common CRUD operations.

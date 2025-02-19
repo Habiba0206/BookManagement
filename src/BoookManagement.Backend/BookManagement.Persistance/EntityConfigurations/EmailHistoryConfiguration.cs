@@ -2,7 +2,7 @@ using BookManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BookManagement.Persistance.EntityConfigurations;
+namespace BookManagement.Persistence.EntityConfigurations;
 
 public class EmailHistoryConfiguration : IEntityTypeConfiguration<EmailHistory>
 {

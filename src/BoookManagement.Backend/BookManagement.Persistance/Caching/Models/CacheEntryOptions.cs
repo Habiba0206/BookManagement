@@ -1,4 +1,4 @@
-﻿namespace BookManagement.Persistance.Caching.Models;
+﻿namespace BookManagement.Persistence.Caching.Models;
 
 /// <summary>
 /// Represents the options for configuring cache entry behavior.

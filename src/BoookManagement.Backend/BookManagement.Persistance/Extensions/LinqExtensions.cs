@@ -1,6 +1,6 @@
 ﻿using BookManagement.Domain.Common.Queries;
 
-namespace BookManagement.Persistance.Extensions;
+namespace BookManagement.Persistence.Extensions;
 
 /// <summary>
 /// Provides extension methods for applying query specifications to IQueryable and IEnumerable collections.

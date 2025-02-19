@@ -1,11 +1,11 @@
-﻿using BookManagement.Persistance.Caching.Brokers;
-using BookManagement.Persistance.DataContexts;
-using BookManagement.Persistance.Repositories.Interfaces;
-using BookManagement.Domain.Common.Commands;
+﻿using BookManagement.Domain.Common.Commands;
 using BookManagement.Domain.Common.Queries;
 using BookManagement.Domain.Entities;
+using BookManagement.Persistence.Caching.Brokers;
+using BookManagement.Persistence.Repositories.Interfaces;
+using BookManagement.Persistence.DataContexts;
 
-namespace BookManagement.Persistance.Repositories;
+namespace BookManagement.Persistence.Repositories;
 
 public class UserSettingsRepository(AppDbContext appDbContext, ICacheBroker cacheBroker) :
     EntityRepositoryBase<UserSettings, AppDbContext>(appDbContext, cacheBroker),

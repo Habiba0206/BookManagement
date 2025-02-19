@@ -2,7 +2,7 @@
 using BookManagement.Domain.Common.Queries;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookManagement.Persistance.Extensions;
+namespace BookManagement.Persistence.Extensions;
 
 /// <summary>
 /// Contains Ef Core internal logic extensions.

@@ -1,13 +1,13 @@
-﻿using BookManagement.Persistance.Caching.Brokers;
-using BookManagement.Persistance.DataContexts;
-using BookManagement.Persistance.Repositories.Interfaces;
-using BookManagement.Domain.Common.Commands;
+﻿using BookManagement.Domain.Common.Commands;
 using BookManagement.Domain.Common.Queries;
 using BookManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using BookManagement.Persistence.Repositories.Interfaces;
+using BookManagement.Persistence.Caching.Brokers;
+using BookManagement.Persistence.DataContexts;
 
-namespace BookManagement.Persistance.Repositories;
+namespace BookManagement.Persistence.Repositories;
 
 public class UserInfoVerificationCodeRepository(AppDbContext appDbContext, ICacheBroker cacheBroker) :
     EntityRepositoryBase<UserInfoVerificationCode, AppDbContext>(appDbContext, cacheBroker),

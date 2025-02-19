@@ -3,7 +3,7 @@ using BookManagement.Domain.Common.Queries;
 using BookManagement.Domain.Entities;
 using System.Linq.Expressions;
 
-namespace BookManagement.Persistance.Repositories.Interfaces;
+namespace BookManagement.Persistence.Repositories.Interfaces;
 
 public interface IEmailTemplateRepository
 {

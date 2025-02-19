@@ -3,7 +3,7 @@ using BookManagement.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BookManagement.Persistance.EntityConfigurations;
+namespace BookManagement.Persistence.EntityConfigurations;
 
 public class NotificationTemplateConfiguration : IEntityTypeConfiguration<NotificationTemplate>
 {

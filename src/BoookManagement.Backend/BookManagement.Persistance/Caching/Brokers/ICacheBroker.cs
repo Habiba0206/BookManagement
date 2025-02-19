@@ -1,6 +1,6 @@
-﻿using BookManagement.Persistance.Caching.Models;
+﻿using BookManagement.Persistence.Caching.Models;
 
-namespace BookManagement.Persistance.Caching.Brokers;
+namespace BookManagement.Persistence.Caching.Brokers;
 
 /// <summary>
 /// Defines cache broker functionality.
