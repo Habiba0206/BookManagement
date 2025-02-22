@@ -51,7 +51,7 @@ public class BookRepository(AppDbContext appDbContext, ICacheBroker cacheBroker)
         Book book,
         CommandOptions commandOptions,
         CancellationToken cancellationToken = default) =>
-    base.UpdateAsync(book, commandOptions, cancellationToken);
+    base.DeleteAsync(book, commandOptions, cancellationToken);
 
     public ValueTask<Book?> DeleteByIdAsync(
         Guid id,

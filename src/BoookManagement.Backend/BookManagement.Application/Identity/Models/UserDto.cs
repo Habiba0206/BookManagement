@@ -11,4 +11,5 @@ public class UserDto
     public int Age { get; set; }
     public Role Role { get; set; }
     public UserState UserState { get; set; }
+    public bool IsDeleted { get; set; } 
 }

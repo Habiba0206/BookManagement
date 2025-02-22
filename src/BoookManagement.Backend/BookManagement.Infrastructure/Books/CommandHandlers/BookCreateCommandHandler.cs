@@ -15,12 +15,8 @@ public class BookCreateCommandHandler(
     {
         var book = mapper.Map<Book>(request.BookDto);
 
-        book.PublicationYear = DateTime.UtcNow.Year;
-        book.ViewsCount = 0;
-        book.PopularityScore = book.ViewsCount * 0.5 + book.PublicationYear * 2;
+        var createdBook = await bookService.CreateAsync(book, cancellationToken: cancellationToken);
 
-        var createdAnswer = await bookService.CreateAsync(book, cancellationToken: cancellationToken);
-
-        return mapper.Map<CreateBookDto>(createdAnswer);
+        return mapper.Map<CreateBookDto>(createdBook);
     }
 }

@@ -15,6 +15,10 @@ public class BookGetByIdQueryHandler(
     {
         var result = await bookService.GetByIdAsync(request.BookId, cancellationToken: cancellationToken);
 
+        result.ViewsCount += 1;
+
+        await bookService.UpdateAsync(result);
+
         return mapper.Map<GetBookDto>(result);
     }
 }

@@ -15,8 +15,10 @@ public class BookUpdateCommandHandler(
     {
         var book = mapper.Map<Book>(request.BookDto);
 
-        var createdBook = await bookService.UpdateAsync(book, cancellationToken: cancellationToken);
+        var updatedBook = await bookService.UpdateAsync(book, cancellationToken: cancellationToken);
 
-        return mapper.Map<CreateBookDto>(createdBook);
+        Console.WriteLine(updatedBook.PublicationYear);
+
+        return mapper.Map<CreateBookDto>(updatedBook);
     }
 }

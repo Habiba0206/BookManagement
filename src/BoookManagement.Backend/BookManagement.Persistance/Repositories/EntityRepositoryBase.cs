@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using BookManagement.Persistence.Caching.Models;
 using BookManagement.Persistence.Caching.Brokers;
 using BookManagement.Persistence.Extensions;
+using BookManagement.Domain.Entities;
 
 namespace BookManagement.Persistence.Repositories;
 
@@ -166,7 +167,21 @@ public abstract class EntityRepositoryBase<TEntity, TContext>(
         CommandOptions commandOptions = default,
         CancellationToken cancellationToken = default)
     {
+
+        var local = DbContext.Set<TEntity>()
+        .Local
+        .FirstOrDefault(entry => entry.Id == entity.Id);
+
+        if (local != null)
+        {
+            DbContext.Entry(local).State = EntityState.Detached;
+        }
+
+        DbContext.Attach(entity);
         DbContext.Set<TEntity>().Update(entity);
+        DbContext.Entry(entity).State = EntityState.Modified;
+
+        //await DbContext.SaveChangesAsync(cancellationToken);
 
         if (cacheEntryOptions is not null)
             await cacheBroker.SetAsync(entity.Id.ToString(), entity, cacheEntryOptions, cancellationToken);

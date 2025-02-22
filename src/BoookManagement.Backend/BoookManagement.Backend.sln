@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Domain", "BookManagement.Domain\BookManagement.Domain.csproj", "{774460B1-019B-4D43-87BA-719658C42513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Persistence", "BookManagement.Persistance\BookManagement.Persistence.csproj", "{F8849CE6-C617-4BBF-98DC-67BD1DF4AC62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Persistance", "BookManagement.Persistance\BookManagement.Persistance.csproj", "{F8849CE6-C617-4BBF-98DC-67BD1DF4AC62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Application", "BookManagement.Application\BookManagement.Application.csproj", "{5E3A3163-7BC7-4A85-9393-AE530ADF24DD}"
 EndProject

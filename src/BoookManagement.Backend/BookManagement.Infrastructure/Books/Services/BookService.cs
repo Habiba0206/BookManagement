@@ -60,6 +60,10 @@ public class BookService(
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
+        book.PublicationYear = DateTime.UtcNow.Year;
+        book.ViewsCount = 0;
+        book.PopularityScore = book.ViewsCount * 0.5 + book.PublicationYear * 2;
+
         return await bookRepository.CreateAsync(book, commandOptions, cancellationToken);
     }
 
@@ -77,7 +81,15 @@ public class BookService(
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
-        return await bookRepository.UpdateAsync(book, commandOptions, cancellationToken);
+        var existingBook = await bookRepository.GetByIdAsync(book.Id) ?? throw new ArgumentNullException("This book doesn't exist");
+        
+        existingBook.UserId = book.UserId;
+        existingBook.Title = book.Title;
+        existingBook.Description = book.Description;
+        existingBook.Author = book.Author;
+        existingBook.PopularityScore = book.ViewsCount * 0.5 + book.PublicationYear * 2;
+
+        return await bookRepository.UpdateAsync(existingBook, commandOptions, cancellationToken);
     }
 
     public ValueTask<Book?> DeleteAsync(

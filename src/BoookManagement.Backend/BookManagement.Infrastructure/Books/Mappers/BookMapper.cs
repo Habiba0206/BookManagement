@@ -10,6 +10,6 @@ public class BookMapper : Profile
     {
         CreateMap<Book, GetBookDto>().ReverseMap();
         CreateMap<Book, CreateBookDto>().ReverseMap();
-        CreateMap<GetBookDto, CreateBookDto>().ReverseMap();
+        //CreateMap<GetBookDto, CreateBookDto>().ReverseMap();
     }
 }
